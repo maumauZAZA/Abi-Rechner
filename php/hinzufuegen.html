@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>du kannst hier Daten hinzufügen!</title>  
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="../photos/abi_rechner_icon.png" sizes="32x32" type="image/png"> 
+<body>
+    <header>
+        <p>Bitte tragen Sie sich hier ein!</p>
+    </header>
+    <nav>
+        <a href="../index.html">
+            <i class="material-icons" style="font-size:36px;">house</i>
+        </a>
+    </nav>
+    <main>
+        <form action="hinzufuegen.php" method="post">
+            <input type="text" name="VName" size="20" required placeholder="Vorname">
+            <br>
+            <input type="text" name="NName" size="20" required placeholder="Nachname">
+            <br>
+            <input type="number" name="Alter" max="99" min="0" step="1" required placeholder="Alter">
+            <br>
+            Wähle dein geschlecht aus!
+            <select name="Geschlecht" required>
+                <option value="Mann">Männlisch</option>
+                <option value="Weib">Weiblisch</option>
+            </select>
+            <br> <br>
+            Tragen Sie hier ihre Noten von Ihren Schwerpunkt ein!
+            <br> <br>
+            <input type="number" name="SP_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="SP_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="SP_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="SP_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier ihre Noten von Ihren zweiten Prüfungsfach ein (bsp. Deutsch, Mathe, Englisch)!
+            <br> <br>
+            <input type="number" name="P2_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="P2_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="P2_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="P2_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier ihre Noten aus Ihren dritten Prüfungsfach ein!
+            <br> <br>
+            <input type="number" name="P3_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="P3_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="P3_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="P3_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier Ihre Noten aus Ihren vierten Prüfungsfach ein!
+            <br> <br>
+            <input type="number" name="P4_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="P4_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="P4_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="P4_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier Ihre Noten aus Ihren fünften Prüfungsfach ein!
+            <br> <br>
+            <input type="number" name="P5_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="P5_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="P5_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="P5_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br> 
+            Tragen Sie hier Ihre Sportnoten ein! 
+            <br> <br>
+            <input type="number" name="SPORT_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="SPORT_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="SPORT_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="SPORT_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier Ihre Naturwissenschaftlichen Noten ein! (bsp.: Physik, Biologie, Chemie)
+            <br> <br>
+            <input type="number" name="NW_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="NW_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="NW_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="NW_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier Ihre Praxis Noten ein!
+            <br> <br>
+            <input type="number" name="PX_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="PX_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <input type="number" name="PX_3" step="1" min="0" max="15" required placeholder="Drittes Semester">
+            <input type="number" name="PX_4" step="1" min="0" max="15" required placeholder="Viertes Semester">
+            <br> <br>
+            Tragen Sie hier Ihre Noten vom Wahlpflichtigen Kurs ein! (Werte und Normen, Religion)
+            <br> <br>
+            <input type="number" name="WP_1" step="1" min="0" max="15" required placeholder="Erstes Semester">
+            <input type="number" name="WP_2" step="1" min="0" max="15" required placeholder="Zweites Semester">
+            <br> <br>
+
+
+
+            <input type="submit" value="Daten Absenden">
+        </form>
+    </main>
+</body>
+</html>
