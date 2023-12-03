@@ -1,9 +1,11 @@
-CREATE DATABASSE IF NOT EXISTS abirechner;
+drop DATABASE if exists abirechner;
+create database abirechner;
 USE abirechner;
-CREATE TABLE schüler (
+CREATE TABLE schueler (
+    ID INT not null AUTO_INCREMENT,
     VName VARCHAR(50),
     NName VARCHAR(50),
-    alter INT,
+    age INT,
     geschlecht VARCHAR(9),
 
     SP_1 INT,
@@ -47,6 +49,7 @@ CREATE TABLE schüler (
     PX_4 INT,
 
     WP_1 INT,
-    WP_2 INT
+    WP_2 INT,
+    primary key (ID)
 
 );
