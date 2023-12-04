@@ -400,6 +400,19 @@ if ($punkteanzahl >= 200){
     echo ("nicht bestanden");
 }
 
+$noten = [$SP_1, $SP_2, $SP_3, $SP_4,
+        $P2_1,  $P2_2,  $P2_3,  $P2_4,
+        $P3_1,  $P3_2,  $P3_3,  $P3_4,
+        $P4_1,  $P4_2,  $P4_3,  $P4_4, 
+        $P5_1,  $P5_2,  $P5_3,  $P5_4, 
+        $SPORT_1,  $SPORT_2,  $SPORT_3,  $SPORT_4, 
+        $NW_1,  $NW_2,  $NW_3,  $NW_4, 
+        $PX_1,  $PX_2,  $PX_3,  $PX_4, 
+        $WP_1,  $WP_2 ];
+
+$durchschnitt = array_sum($noten) / count($noten);
+echo "<br>Dein Durchschnitt liegt bei $durchschnitt Punkten!";
+
 
 
 echo "<br>du hast $unterkurs unterkurse<br>";
