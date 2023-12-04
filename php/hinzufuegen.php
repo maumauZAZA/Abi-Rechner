@@ -10,12 +10,17 @@ $username = "root";
 $password = "";
 $dbname = "abirechner";
 $table = "schueler";
+$nullp = "0";
+$unterkurs = "0";
+$leistungsuk = "0";
 
     $ID = "0";
     if (isset($_POST["VName"])) {
-        $VName = $_POST["VName"];
-    }
+        $VName = $_POST["VName"]; 
+    } 
     
+
+
    if (isset($_POST["NName"]))
     {
         $NName = $_POST["NName"];
@@ -36,7 +41,8 @@ $table = "schueler";
 
     if (isset($_POST["SP_1"])) {
         $SP_1 = $_POST["SP_1"];
-    }
+    } 
+
     if (isset($_POST["SP_2"])) {
         $SP_2 = $_POST["SP_2"];
     }
@@ -184,6 +190,214 @@ mysqli_select_db ($conn, $dbname);
     
     mysqli_query($conn, $sql);
     
+//maximal 7 unterkurse
+//300 punkte
+//keine null punkte
+
+if ($SP_1 < 5) {
+    echo "nicht bestanden";
+} elseif ($SP_2 < 5){
+    echo "nicht bestanden";
+} elseif ($SP_3 < 5){
+    echo "nicht bestanden";
+} elseif ($SP_4 < 5){
+    echo "nicht bestanden";
+} elseif ($P2_1 == 0){
+    echo "nicht bestanden";
+} elseif ($P2_2 == 0){
+    echo "nicht bestanden";
+} elseif ($P2_3 == 0){
+    echo "nicht bestanden";
+} elseif ($P2_4 == 0){
+    echo "nicht bestanden";
+} elseif ($P3_1 == 0){
+    echo "nicht bestanden";
+} elseif ($P3_2 == 0){
+    echo "nicht bestanden";
+} elseif ($P3_3 == 0){
+    echo "nicht bestanden";
+} elseif ($P3_4 == 0){
+    echo "nicht bestanden";
+} elseif ($P4_1 == 0){
+    echo "nicht bestanden";
+} elseif ($P4_2 == 0){
+    echo "nicht bestanden";
+} elseif ($P4_3 == 0){
+    echo "nicht bestanden";
+} elseif ($P4_4 == 0){
+    echo "nicht bestanden";
+} elseif ($P5_1 == 0){
+    echo "nicht bestanden";
+} elseif ($P5_2 == 0){
+    echo "nicht bestanden";
+} elseif ($P5_3 == 0){
+    echo "nicht bestanden";
+} elseif ($P5_4 == 0){
+    echo "nicht bestanden";
+} elseif ($SPORT_1 == 0){
+    echo "nicht bestanden";
+} elseif ($SPORT_2 == 0){
+    echo "nicht bestanden";
+} elseif ($SPORT_3 == 0){
+    echo "nicht bestanden";
+} elseif ($SPORT_4 == 0){
+    echo "nicht bestanden";
+} elseif ($NW_1 == 0){
+    echo "nicht bestanden";
+} elseif ($NW_2 == 0){
+    echo "nicht bestanden";
+} elseif ($NW_3 == 0){
+    echo "nicht bestanden";
+} elseif ($NW_4 == 0){
+    echo "nicht bestanden";
+} elseif ($PX_1 == 0){           
+    echo "nicht bestanden";
+} elseif ($PX_2 == 0){
+    echo"nicht bestanden";
+} elseif ($PX_3 == 0){
+    echo "nicht bestanden";
+} elseif ($PX_4 == 0){
+    echo "nicht bestanden";
+} elseif ($WP_1 == 0){
+    echo "nicht bestanden";
+} elseif ($WP_2 == 0){
+    echo "nicht bestanden";
+} 
+
+
+if($SP_1 <5){
+    $leistungsuk++;
+}
+if($SP_2<5){
+    $leistungsuk++;
+}
+if($SP_3<5){
+    $leistungsuk++;
+}
+if($SP_4<5){
+    $leistungsuk++;
+}
+
+if ($P2_1 < 5){
+    $unterkurs++;
+}
+
+if($P2_2 < 5){
+    $unterkurs++;
+}
+
+if($P2_3 < 5){
+    $unterkurs++;
+}         
+
+if($P2_4 < 5){
+    $unterkurs++;
+}
+
+if($P3_1<5){
+    $unterkurs++;
+}
+if($P3_2 < 5){
+    $unterkurs++;
+}
+if($P3_3<5){
+    $unterkurs++;
+}
+if($P3_4<5){
+    $unterkurs++;
+}
+if($P4_1<5){
+    $unterkurs++;
+}
+if($P4_2<5){
+    $unterkurs++;
+}if($P4_3<5){
+    $unterkurs++;
+}
+if($P4_4<5){
+    $unterkurs++;
+}
+if($P5_1<5){
+    $unterkurs++;
+}
+if ($P5_2<5){
+    $unterkurs++;
+}    
+if ($P5_3<5){
+    $unterkurs++;
+}
+if($P5_4<5){
+    $unterkurs++;
+}
+if($SPORT_1<5){
+    $unterkurs++;
+}
+if($SPORT_2<5){
+    $unterkurs++;
+}
+if($SPORT_3<5){
+    $unterkurs++;
+}
+if($SPORT_4<5){
+    $unterkurs++;
+}
+if($NW_1<5){
+    $unterkurs++;
+}
+if($NW_2<5){
+    $unterkurs++;
+}
+if($NW_3<5){
+    $unterkurs++;
+}    
+if($NW_4<5){
+    $unterkurs++;
+}
+if($PX_1<5){
+    $unterkurs++;
+}
+if($PX_2<5){
+    $unterkurs++;
+}
+if($PX_3<5){
+    $unterkurs++;
+}
+if($PX_4<5){
+    $unterkurs++;
+}
+if($WP_1<5){
+    $unterkurs++;
+}
+if($WP_2<5){
+    $unterkurs++;
+}
+
+if($unterkurs + $leistungsuk > 7){
+    echo "nicht bestanden";
+}elseif($leistungsuk > 3){
+    echo "nicht bestanden";
+}elseif($unterkurs >= 4 && $leistungsuk >= 3){
+    echo "nicht bestanden";
+}else{
+    echo "bestanden";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+echo "<br>du hast $unterkurs unterkurse<br>";
+echo "<br>du hast $leistungsuk unterkurse im leistungskurs"
+
 ?>
 </body>
-</html>  
+</html>
