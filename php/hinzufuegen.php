@@ -15,6 +15,11 @@ $unterkurs = "0";
 $leistungsuk = "0";
 $punkteanzahl = "0";
 
+
+
+
+$Bestanden= "nein";
+
     $ID = "0";
     if (isset($_POST["VName"])) {
         $VName = $_POST["VName"]; 
@@ -177,19 +182,7 @@ $punkteanzahl = "0";
     }
 
 
-$conn = mysqli_connect($servername, $username, $password)
-    or die("Verbindung sagt NEIN!");
-echo "<br>Danke für Infos";    
 
-
-mysqli_select_db ($conn, $dbname);
-
-    $sql = "INSERT INTO $table  VALUES ('$ID', '$VName', '$NName', '$alter', '$geschlecht', '$SP_1', '$SP_2', '$SP_3', '$SP_4', '$P2_1', '$P2_2', '$P2_3', '$P2_4', '$P3_1', '$P3_2', '$P3_3', '$P3_4',
-    '$P4_1', '$P4_2', '$P4_3', '$P4_4', '$P5_1', '$P5_2', '$P5_3', '$P5_4', '$SPORT_1', '$SPORT_2', '$SPORT_3', '$SPORT_4', '$NW_1', '$NW_2', '$NW_3', '$NW_4',
-    '$PX_1', '$PX_2', '$PX_3', '$PX_4', '$WP_1', '$WP_2'  )";
-    
-    
-    mysqli_query($conn, $sql);
     
 //maximal 7 unterkurse
 //300 punkte
@@ -197,73 +190,108 @@ mysqli_select_db ($conn, $dbname);
 
 if ($SP_1 < 5) {
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SP_2 < 5){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SP_3 < 5){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SP_4 < 5){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P2_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P2_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P2_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P2_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P3_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P3_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P3_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P3_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P4_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P4_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P4_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P4_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P5_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P5_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P5_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($P5_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SPORT_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SPORT_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SPORT_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($SPORT_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($NW_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($NW_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($NW_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($NW_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($PX_1 == 0){           
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($PX_2 == 0){
     echo"nicht bestanden";
+    $nullp++;
 } elseif ($PX_3 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($PX_4 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($WP_1 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } elseif ($WP_2 == 0){
     echo "nicht bestanden";
+    $nullp++;
 } 
+
 
 
 if($SP_1 <5){
@@ -373,16 +401,59 @@ if($WP_2<5){
     $unterkurs++;
 }
 
-if($unterkurs + $leistungsuk > 7){
-    echo "nicht bestanden";
-}elseif($leistungsuk > 3){
-    echo "nicht bestanden";
-}elseif($unterkurs >= 4 && $leistungsuk >= 3){
-    echo "nicht bestanden";
-}else{
-    echo "bestanden";
+if($leistungsuk== 0 && $unterkurs== 0){
+    $Bestanden="ja";
+}elseif($leistungsuk== 0 && $unterkurs== 1){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0 && $unterkurs== 2){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0 && $unterkurs== 3){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0 && $unterkurs== 4){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0 && $unterkurs== 5){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0&& $unterkurs== 6){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 0&& $unterkurs== 7){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 0){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 0){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 1){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 2){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 3){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 4){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 5){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 1&& $unterkurs== 6){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 1){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 2){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 3){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 4){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 2&& $unterkurs== 5){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 0){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 1){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 2){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 3){
+    $Bestanden= "ja";
+}elseif($leistungsuk== 3&& $unterkurs== 4){
+    $Bestanden= "ja";
 }
-
 
 $punkteanzahl = $SP_1 + $SP_1 + $SP_2 + $SP_2 + $SP_3 + $SP_3 + $SP_4 + $SP_4 + 
                 $P2_1 + $P2_1 + $P2_2 + $P2_2 + $P2_3 + $P2_3 + $P2_4 + $P2_4 +
@@ -394,12 +465,6 @@ $punkteanzahl = $SP_1 + $SP_1 + $SP_2 + $SP_2 + $SP_3 + $SP_3 + $SP_4 + $SP_4 +
                 $PX_1 + $PX_2 + $PX_3 + $PX_4 +
                 $WP_1 + $WP_2 ;
 
-if ($punkteanzahl >= 200){
-    echo ("<br>punktezahl ist $punkteanzahl");
-}  else {
-    echo ("nicht bestanden");
-}
-
 $noten = [$SP_1, $SP_2, $SP_3, $SP_4,
         $P2_1,  $P2_2,  $P2_3,  $P2_4,
         $P3_1,  $P3_2,  $P3_3,  $P3_4,
@@ -410,13 +475,64 @@ $noten = [$SP_1, $SP_2, $SP_3, $SP_4,
         $PX_1,  $PX_2,  $PX_3,  $PX_4, 
         $WP_1,  $WP_2 ];
 
+
+if($nullp >0){
+    $Bestanden = "nein";
+}
+
+
+if ($punkteanzahl <= 200){
+    echo ("<br>punktezahl ist $punkteanzahl");
+    $Bestanden="nein";
+}  else {
+    echo ("Bestanden");
+}
+
+
+
+
+
 $durchschnitt = array_sum($noten) / count($noten);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$conn = mysqli_connect($servername, $username, $password)
+    or die("Verbindung sagt NEIN!");
+echo "<br>Danke für Infos";    
+
+mysqli_select_db ($conn, $dbname);
+
+    $sql = "INSERT INTO $table  VALUES ('$ID', '$VName', '$NName', '$alter', '$geschlecht', '$SP_1', '$SP_2', '$SP_3', '$SP_4', '$P2_1', '$P2_2', '$P2_3', '$P2_4', '$P3_1', '$P3_2', '$P3_3', '$P3_4',
+    '$P4_1', '$P4_2', '$P4_3', '$P4_4', '$P5_1', '$P5_2', '$P5_3', '$P5_4', '$SPORT_1', '$SPORT_2', '$SPORT_3', '$SPORT_4', '$NW_1', '$NW_2', '$NW_3', '$NW_4',
+    '$PX_1', '$PX_2', '$PX_3', '$PX_4', '$WP_1', '$WP_2' , '$punkteanzahl', '$Bestanden', '$durchschnitt' )";
+    
+    
+    mysqli_query($conn, $sql);
+
+
+
+
+
+
+    
+
+
 echo "<br>Dein Durchschnitt liegt bei $durchschnitt Punkten!";
-
-
-
 echo "<br>du hast $unterkurs unterkurse<br>";
 echo "<br>du hast $leistungsuk unterkurse im leistungskurs"
+
 
 ?>
 </body>

@@ -50,6 +50,9 @@ CREATE TABLE schueler (
 
     WP_1 INT,
     WP_2 INT,
+    punkteanzahl INT,
+    bestanden VARCHAR(30),
+    notendurchschnitt INT,
     primary key (ID)
 
 );

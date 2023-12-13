@@ -17,13 +17,22 @@
         </a>
     </nav>
     <main>
-        <form action="hinzufuegen.php" method="post">
-            <input type="search" name="search" size="20" placeholder="Suchen...">
+        <form action="abfragen.php" method="post">
+            
+            <input type="text" name="VName_Search" placeholder="Vorname">
+            <input type="text" name="NName_Search" placeholder="Nachname">
+            <select name="bestanden">
+                <option value=null></option>
+                <option value="ja">ja</option>
+                <option value="nein">nein</option>
+            </select>
+            <input type="submit">
         </form>
     </main>
     <footer>
         <a href="hinzufuegen.html">Daten Hinzufügen</a>
         <a href="../index.html">Startseite</a>
     </footer>
+
 </body>
 </html>
