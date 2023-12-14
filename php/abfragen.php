@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../style2.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" href="photos/abi_rechner_icon.png" sizes="32x32" type="image/png">
 </head>
 <body>
 <header>
@@ -58,7 +59,7 @@
                     echo "<p><b>Gefiltert nach Vornamen:</b></p><br>  <b>Vorname:</b> ".$row['VName'] ."<br> <b>Nachname:</b> " .$row['NName']. "<br><b> Alter: </b>" .$row['age']. "<br> <b>Geschlecht:</b> " .$row['geschlecht']. "<br> <b>Hast du bestanden?</b> " .$row['bestanden'] ."<br> <b>Deine Gesamtpunktzahl:</b> " .$row['punkteanzahl']. "<br><b> Dein Notendurchschnitt: </b>". $row['notendurchschnitt'] ."<br> <br>";
                 }
             }else{
-                echo "Keine Einträge gefunden";
+                echo "Keine Einträge gefunden<br>";
             }
         }
 
@@ -70,7 +71,7 @@
                     echo "<p><b>Gefiltert nach Nachnamen:</b></p><br>  <b>Vorname:</b> ".$row['VName'] ."<br> <b>Nachname:</b> " .$row['NName']. "<br><b> Alter: </b>" .$row['age']. "<br> <b>Geschlecht:</b> " .$row['geschlecht']. "<br> <b>Hast du bestanden?</b> " .$row['bestanden'] ."<br> <b>Deine Gesamtpunktzahl:</b> " .$row['punkteanzahl']. "<br><b> Dein Notendurchschnitt: </b>". $row['notendurchschnitt'] ."<br> <br>";
                 }
             }else{
-                echo "Keine Einträge gefunden";
+                echo "Keine Einträge gefunden<br>";
             }
         }
 
@@ -88,7 +89,7 @@
                             echo "<p><b>Gefiltert nach Bestanden:</b></p><br>  <b>Vorname:</b> ".$row['VName'] ."<br> <b>Nachname:</b> " .$row['NName']. "<br><b> Alter: </b>" .$row['age']. "<br> <b>Geschlecht:</b> " .$row['geschlecht']. "<br> <b>Hast du bestanden?</b> " .$row['bestanden'] ."<br> <b>Deine Gesamtpunktzahl:</b> " .$row['punkteanzahl']. "<br><b> Dein Notendurchschnitt: </b>". $row['notendurchschnitt'] ."<br> <br>";
                         }
                     }else{
-                        echo "Keine Einträge gefunden";
+                        echo "Keine Einträge gefunden<br>";
                     }
                 }
         
@@ -102,7 +103,7 @@
                             echo "<p><b>Gefiltert nach nicht Bestanden:</b></p><br>  <b>Vorname:</b> ".$row['VName'] ."<br> <b>Nachname:</b> " .$row['NName']. "<br><b> Alter: </b>" .$row['age']. "<br> <b>Geschlecht:</b> " .$row['geschlecht']. "<br> <b>Hast du bestanden?</b> " .$row['bestanden'] ."<br> <b>Deine Gesamtpunktzahl:</b> " .$row['punkteanzahl']. "<br><b> Dein Notendurchschnitt: </b>". $row['notendurchschnitt'] ."<br> <br>";
                         }
                     }else{
-                        echo "Keine Einträge gefunden";
+                        echo "Keine Einträge gefunden<br>";
         }
         }   
    

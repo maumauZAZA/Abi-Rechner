@@ -1,8 +1,20 @@
 <html>
 <head>
     <title>hinzufügen</title>
+    <link rel="icon" href="photos/abi_rechner_icon.png" sizes="32x32" type="image/png">
+    <link rel="stylesheet" href="../style2.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
+<header>
+    <p>Hier werden die Daten ausgewertet:</p>
+</header>
+<nav>
+    <a href="../index.html">
+        <i class="material-icons" style="font-size:36px;">house</i>
+    </a>
+</nav>
+<main>
 <?php
 
 $servername = "localhost";
@@ -535,5 +547,6 @@ echo "<br>du hast $leistungsuk unterkurse im leistungskurs"
 
 
 ?>
+</main>
 </body>
 </html>
