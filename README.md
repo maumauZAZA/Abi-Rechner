@@ -9,4 +9,3 @@ Design der Website:
 
 Dieses Projekt ist fertiggestellt!
 
-[AbirechnerDokumentation.nikolai-bahtinov.maurice-raschke (2).pdf](https://github.com/maumauZAZA/Abi-Rechner/files/13676841/AbirechnerDokumentation.nikolai-bahtinov.maurice-raschke.2.pdf)
