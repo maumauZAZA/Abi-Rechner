@@ -7,5 +7,5 @@ Diese Werden dann in einer Datenbank gespeichert. Außerdem soll berechnet und a
 Design der Website:
 ![abi_rechner_hintergrund](https://github.com/maumauZAZA/Abi-Rechner/assets/101409114/dde9e35d-c9e0-41bb-adb7-08daa2908914)
 
-Diese Website ist ein angefangenes Projekt und ist noch nicht fertig gestellt!
+Dieses Projekt ist fertiggestellt!
 
